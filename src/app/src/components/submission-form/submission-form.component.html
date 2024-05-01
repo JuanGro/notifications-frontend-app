@@ -1,0 +1,78 @@
+<div class="container-sm">
+  <div class="row align-items-center vh-100">
+    <div class="col">
+      <div class="card">
+        <h1 class="card-header text-center">{{ messages.APP_NAME }}</h1>
+        <div class="card-body">
+          <h5 class="card-title mb-3">{{ messages.CREATE_NOTIFICATION }}</h5>
+          <form [formGroup]="submissionForm" (ngSubmit)="sendForm()">
+            <div class="row mb-3">
+              <div class="col">
+                <label for="categoryInput" class="form-label">{{
+                  messages.CATEGORY
+                }}</label>
+                <select
+                  id="categorySelect"
+                  class="form-select"
+                  formControlName="category"
+                  aria-label="Category select"
+                >
+                  <option value="null">{{ messages.SELECT_CATEGORY }}</option>
+                  <option
+                    *ngFor="let category of categories"
+                    value="{{ category._id }}"
+                  >
+                    {{ category.name }}
+                  </option>
+                </select>
+                <div
+                  *ngIf="
+                    submissionForm.controls.category.invalid &&
+                    submissionForm.controls.category.touched
+                  "
+                >
+                  <span id="categoryErrorMessage" class="text-danger"
+                    >{{ messages.CATEGORY }} {{ messages.IS_REQUIRED }}</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="messageInput" class="form-label">{{
+                  messages.MESSAGE
+                }}</label>
+                <textarea
+                  id="messageInput"
+                  class="form-control"
+                  formControlName="message"
+                ></textarea>
+                <div
+                  *ngIf="
+                    submissionForm.controls.message.invalid &&
+                    submissionForm.controls.message.touched
+                  "
+                >
+                  <span id="messageErrorMessage" class="text-danger"
+                    >{{ messages.MESSAGE }} {{ messages.IS_REQUIRED }}</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col text-right">
+                <button
+                  id="sendNotificationButton"
+                  type="submit"
+                  class="btn btn-outline-primary"
+                >
+                  {{ messages.SEND_NOTIFICATION }}
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,27 +1,39 @@
-# NotificationsFrontEnd
+# Notifications Frontend App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+_This repository contains a [Angular](https://angular.io) app to implement a notifications app._
 
-## Development server
+## Index
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Notifications Frontend App](#notifications-frontend-app)
+  - [Index](#index)
+  - [Technologies](#technologies)
+  - [Usage](#usage)
 
-## Code scaffolding
+## Technologies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[![Angular](https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=white)](https://angular.io)
+[![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://www.javascript.com)
+[![Typescript](https://img.shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=white)](https://www.typescriptlang.org)
+[![Jest](https://img.shields.io/badge/-jest-%23C21325?logo=jest&logoColor=white)](https://jestjs.io)
+[![Eslint](https://img.shields.io/badge/ESLint-4B3263?logo=eslint&logoColor=white)](https://eslint.org)
+[![Github](https://img.shields.io/badge/github-%23121011.svg?logo=github&logoColor=white)](https://github.com)
 
-## Build
+## Usage
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To execute this [Angular](https://angular.io) app locally, you need.
 
-## Running unit tests
+**First, you must have installed [Node](https://nodejs.org/es/) version `22.0.0`.**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Also, edit the environment variables with your api configuration.
 
-## Running end-to-end tests
+Then, install the dependencies using:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+npm install
+```
 
-## Further help
+Finally, use this command to run the app:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+npm start
+```
